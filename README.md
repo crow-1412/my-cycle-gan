@@ -163,10 +163,10 @@ python recalculate_fid.py
 <div align="center">
   <div class="training-visualization">
     <img src="200epoch_1.jpg" alt="训练曲线图1" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <p><i>📈 学习率、FID分数和生成器损失变化曲线</i></p>
+    <p><i>📈 前 200epoch 学习率、FID分数和生成器损失变化曲线</i></p>
     <br>
     <img src="200epoch_2.jpg" alt="训练曲线图2" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <p><i>📊 判别器损失、循环一致性损失和身份损失变化曲线</i></p>
+    <p><i>📊 前 200epoch 判别器损失、循环一致性损失和身份损失变化曲线</i></p>
   </div>
   <br>
   <div class="optimization-visualization">
@@ -189,8 +189,8 @@ python recalculate_fid.py
 #### 1. 学习率变化
 - 初始学习率：0.0001
 - 前100个epoch保持恒定
-- 100-400 epoch线性衰减
-- 最终学习率降至约2e-5
+- 100-200 epoch线性衰减
+- 200-280 epoch调整为新的学习率策略
 - 判别器和生成器学习率分别调整
 
 #### 2. FID分数变化
@@ -208,8 +208,8 @@ python recalculate_fid.py
 
 3. 平均FID（FID_score_avg）
    - 200 epoch时达到最优值46.41
-   - 之后略有上升
-   - 400 epoch时约为47-48
+   - 200-280 epoch期间逐渐上升
+   - 训练结束时约为51.08
 
 #### 3. 损失函数变化
 1. 生成器损失（loss_G）
