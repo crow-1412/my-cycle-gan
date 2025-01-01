@@ -163,21 +163,21 @@ python recalculate_fid.py
 #### 训练曲线展示
 <div align="center">
   <div class="training-visualization">
-    <img src="200epoch_1.jpg" alt="训练曲线图1" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="assets/200epoch_1.jpg" alt="训练曲线图1" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <p><i>📈 前 200epoch 学习率、FID分数和生成器损失变化曲线</i></p>
     <br>
-    <img src="200epoch_2.jpg" alt="训练曲线图2" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="assets/200epoch_2.jpg" alt="训练曲线图2" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <p><i>📊 前 200epoch 判别器损失、循环一致性损失和身份损失变化曲线</i></p>
   </div>
   <br>
   <div class="optimization-visualization">
-    <img src="200-280epoch_1.jpg" 
+    <img src="assets/200-280epoch_1.jpg" 
          alt="优化阶段训练曲线1" 
          width="80%"
          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <p><i>🔄 200-280 Epochs期间的FID和损失变化</i></p>
     <br>
-    <img src="200-280epoch_2.jpg"
+    <img src="assets/200-280epoch_2.jpg"
          alt="优化阶段训练曲线2"
          width="80%"
          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
@@ -319,13 +319,13 @@ python recalculate_fid.py
 ### 优化效果对比
 <div align="center">
   <div class="comparison-results">
-    <img src="280与200epoch生成莫奈图片.jpg" 
+    <img src="assets/280与200epoch生成莫奈图片.jpg" 
          alt="280与200epoch生成莫奈图片对比" 
          width="90%"
          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <p><i>🎨 200 vs 280 Epochs：莫奈画作风格生成效果对比</i></p>
     <br>
-    <img src="280与200epoch生成照片对比-1.jpg" 
+    <img src="assets/280与200epoch生成照片对比-1.jpg" 
          alt="280与200epoch生成照片对比" 
          width="90%"
          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
