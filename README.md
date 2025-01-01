@@ -185,12 +185,31 @@ python recalculate_fid.py
   </div>
 </div>
 
+### 测试集FID评估结果
 
 <div align="center">
-  <img src="测试集中的fid值-1.jpg" alt="测试集FID分数变化" width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <p><i>📊 测试集中的FID分数变化趋势</i></p>
+  <img src="assets/test_fid_scores.png" alt="测试集FID分数变化" width="80%">
+  <p><i>📊 测试集FID分数变化趋势</i></p>
+  <br>
+  <table>
+    <tr>
+      <th>指标</th>
+      <th>数值</th>
+    </tr>
+    <tr>
+      <td>照片域FID</td>
+      <td>121.49</td>
+    </tr>
+    <tr>
+      <td>莫奈域FID</td>
+      <td>131.68</td>
+    </tr>
+    <tr>
+      <td>平均FID</td>
+      <td>126.59</td>
+    </tr>
+  </table>
 </div>
-
 
 ### 训练指标分析
 #### 1. 学习率变化
