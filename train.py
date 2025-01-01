@@ -330,7 +330,16 @@ for epoch in range(start_epoch, config['epochs']):
     # 计算FID分数
     if epoch % config['fid_freq'] == 0:
         print("Calculating FID scores...")
-        fid_scores = calculate_fid(G_AB, G_BA, dataloader, device)
+        # 使用测试集计算FID
+        test_dataset = ImageDataset("data", mode='test')
+        test_dataloader = DataLoader(
+            test_dataset,
+            batch_size=2,
+            shuffle=False,
+            num_workers=2,
+            pin_memory=True
+        )
+        fid_scores = calculate_fid(G_AB, G_BA, test_dataloader, device)
         wandb.log({
             'FID_score_photo': fid_scores['photo_fid'],
             'FID_score_monet': fid_scores['monet_fid'],

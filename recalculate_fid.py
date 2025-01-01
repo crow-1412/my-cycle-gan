@@ -34,13 +34,13 @@ def main():
     # 设备配置
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
-    # 数据加载器配置 - 使用更小的batch_size
-    dataset = ImageDataset("data")
+    # 数据加载器配置 - 使用测试集
+    dataset = ImageDataset("data", mode='test')  # 修改为使用测试集
     dataloader = DataLoader(
         dataset,
         batch_size=2,  # 减小batch_size
         shuffle=False,
-        num_workers=2,  # 减少worker数量
+        num_workers=2,
         pin_memory=True
     )
     
